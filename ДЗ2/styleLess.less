@@ -1,0 +1,62 @@
+@triangle-borders: 14px; // толщина border'ов для формирования треугольника выпадайки
+@menu-background: blue; // цвет выпадайки и её треугольника
+.container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: grid;
+    .grid{
+        position: relative;
+        top:10%;
+        width: 15%;
+        justify-self: center; // центрирование по горизонтали
+    }
+}
+.btn2{    
+    border:solid black 3px;
+    border-radius: 5px;
+    width: 160px;
+    height: 50px;
+    &:hover~.hidden-div{
+        display:block;        
+    }    
+}
+.hidden-div{
+    display:none; 
+    &:hover{ 
+        display:block;
+    }
+}
+.triangle {
+    width: 0;
+    height: 0;     
+    position: relative; 
+    left:35px;
+    border-left: @triangle-borders solid transparent;
+    border-right: @triangle-borders solid transparent;
+    border-bottom: @triangle-borders solid black;
+    z-index: 3;
+    &::after {
+        content: ''; 
+        position: absolute;    
+        left: -14px;
+        top: 5px;
+        border-left: @triangle-borders solid transparent;
+        border-right: @triangle-borders solid transparent;
+        border-bottom: @triangle-borders solid @menu-background;
+     }
+}
+
+.menu{ 
+    border: 5px solid black;
+    border-radius: 8px;
+    display: grid;
+    grid-gap: 10px;
+    div { 
+        padding: 10%;
+        background: @menu-background;
+        text-align: center;
+      } 
+    }
+ 
+

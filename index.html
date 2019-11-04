@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home works</title>
+    <link rel="stylesheet" type="text/css" href="ДЗ2/styleLess.css">
+</head>
+<body>
+<div class = "HW2"> Домашнее задание №2  
+<div class = "container">
+<div class = "grid">
+<button class = "btnSecond">Hover me</button>
+<div class = "hidden-div">
+<div class = 'triangleSecond'></div>
+<div class="menuSecond"> 
+  <div>String 1</div>
+  <div>String 2</div>
+  <div>String 3</div>
+  <div>String 4 String 4 String 4 String 4</div>
+  <div>String 5</div>
+  <div>String 6</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class = "code">
+HTML:
+<xmp>
+    <div class = "HW2"> Домашнее задание №2  
+    <div class = "container">
+    <div class = "grid">
+    <button class = "btnSecond">Hover me</button>
+    <div class = "hidden-div">
+    <div class = 'triangleSecond'></div>
+    <div class="menuSecond"> 
+      <div>String 1</div>
+      <div>String 2</div>
+      <div>String 3</div>
+      <div>String 4 String 4 String 4 String 4</div>
+      <div>String 5</div>
+      <div>String 6</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>   
+    </xmp>
+    css:
+    .HW1 {
+      position: absolute;
+      top:80%;
+      left: 10%;
+  }
+  
+  .string {
+      color:white;
+      text-align: center;
+      width:100px;
+      height: 20px;
+      padding:5px;
+      border-bottom: solid black 3px;
+  }	
+  /* Первый способ */
+  .first {
+          position: absolute;
+          height: 400px;
+      }   
+  .btn{    
+      border:solid black 3px;
+      border-radius: 5px;
+      width:160px;
+      height: 50px;
+  }
+  #stringTop{
+      position: relative;
+      left:5px;
+      height:20px;
+      background-color: white;
+      color:white;
+      display: inline;
+      z-index: 3; 
+  }
+  .menu {
+      position: relative;
+      border: solid black 3px;
+      border-radius: 10px;
+      width:110px;
+    background:blue;
+      top:-9px;    
+      z-index:2
+  }
+  
+  .menuD{
+      display:none;
+      width: 160px;
+  }
+  .btn:hover~.menuD{
+      display:block;
+  }
+  .menuD:hover{
+      display:block;
+  }
+  
+  /* Второй способ */
+  .second {
+      position: absolute;
+      float: right;
+      left: 220px;
+  }    
+  .triangle {
+       width: 0;
+       height: 0;     
+       position: relative; 
+       left:35px;
+       border-left: 14px solid transparent;
+       border-right: 14px solid transparent;
+       border-bottom: 14px solid black;
+       z-index: 3;
+  }
+  .triangle::after {
+      content: ''; 
+      position: absolute;    
+      left:-14px;
+      top: 5px;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 14px solid blue;
+  }
+  .btn2{    
+      border:solid black 3px;
+      border-radius: 5px;
+      width:160px;
+      height: 50px;
+  }
+  .menu2 {
+      position: relative;
+      border: solid black 3px;
+      border-radius: 10px;
+      width:110px;
+    background:blue; 
+       }
+  .menu2D{
+      display:none;
+  }
+  .menu2D:hover{
+      display:block;
+  }
+   .btn2:hover~.menu2D{
+      display:block;
+  }
+  </div>
+</body>
+</html>

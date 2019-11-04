@@ -1,0 +1,66 @@
+.container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: grid
+}
+
+.container .grid {
+    position: relative;
+    top: 10%;
+    width: 15%;
+    justify-self: center
+}
+
+.btn{
+    border: solid black 3px;
+    border-radius: 5px;
+    width: 160px;
+    height: 50px
+}
+
+.btn:hover~.hidden-div {
+    display: block
+}
+
+.hidden-div {
+    display: none
+}
+
+.hidden-div:hover {
+    display: block
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    position: relative;
+    left: 35px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid black;
+    z-index: 3
+}
+
+.triangle:after {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 5px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid blue
+}
+
+.menu {
+    border: 5px solid black;
+    border-radius: 8px;
+    display: grid;
+    grid-gap: 10px
+}
+
+.menu div {
+    padding: 10%;
+    background: blue;
+    text-align: center
+}
