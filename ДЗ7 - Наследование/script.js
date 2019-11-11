@@ -15,9 +15,6 @@ var Man = (function() {
   };
   Man.prototype = Object.create(Human.prototype);
   Man.prototype.constructor = Man;
-  Man.prototype._super = Human.prototype;
-
-
   Man.prototype.printInfo = function() {
     return ("Hi! I'm a man, my name is " + this.name + " and i'm " + this.age + " years old")
   };
